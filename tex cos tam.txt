@@ -1,0 +1,300 @@
+\documentclass[a4paper, 11pt]{article}
+
+
+\usepackage{latexsym}
+
+
+\usepackage[MeX]{polski}
+
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{hyperref}
+
+
+\usepackage{textcomp}
+
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Jak co robić}
+
+\author{Ja i tylko ja}
+
+\maketitle
+
+\today
+
+\begin{center}
+
+\tableofcontents
+
+\section{Jeden}
+
+Przykład 1
+
+\end{center}
+
+\ldots Słynne równanie einsteina
+
+\begin{equation}
+
+e = m \cdot c^2 \; ,
+
+\end{equation}
+
+jest bardziej znanym, ale też najmniej rozumianym równaniem w~fizyce.
+
+\section{Dwa}
+
+\begin{center}
+
+Przykład 2
+
+\end{center}
+
+\ldots którego wynikiem jest prądowe prawo Kirchoffa:
+
+\begin{equation}
+
+\sum_{k=1}{n} I_k = 0 \; .
+
+\end{equation}
+
+\newpage
+
+\section{Trzy}
+
+\begin{center}
+
+Przykład 3
+
+\end{center}
+
+\ldots co ma określone zalety.
+
+\begin{equation}
+
+I_D = I_F - I_R
+
+\end{equation}
+
+jest rdzeniem innego modelu tranzystora.
+
+\ldots Mniejszą od akapitu jednostką podziału tekstu jest zdanie.
+
+"Please press the 'x' key."
+
+\url{http://www.Rich_Bitch.edu/\~bush}
+
+Jest $-30\,^{\circ}\mathrm{C}$.
+
+{\fontsize{15}{20}\selectfont\texttt{\emph{30min}}} za {\fontsize{15}{20}\selectfont 30}\texteuro
+
+{\fontsize{15}{20}\selectfont\textsf{\emph{1 godzinka},}} za {\fontsize{15}{20}\selectfont 50}\texteuro\footnote{wiadomo o co chodzi}
+
+ nie tak..., lecz raczej tak:
+
+
+Nowy Jork, Tokio, Budapeszt, \ldots 
+
+\begin{enumerate}
+
+\item Taka lista:
+
+\begin{itemize}
+
+\item wygląd
+
+\item śmiesznie
+
+\end{itemize}
+
+\item Pamiętaj:
+
+\begin{description}
+
+\item[Głupoty] nie staną się mądrościami, gdy się je wyliczy szmato.
+
+\item[Mądrości] można elegancko zestawić w~wyliczeniach.
+
+\end{description}
+
+\end{enumerate}
+
+\begin{flushleft}
+
+Ja cię kręce ale tekst jest ładnie wyrównany do lewej strony
+
+kto by się spodziewał
+
+\end{flushleft}
+
+\begin{flushright}
+
+ale dziwnie jest jak tekst jest wyrównany do prawej
+
+wrrr
+
+\end{flushright}
+
+\begin{center}
+
+a tutaj jest tekst na środku
+
+woooow
+
+\end{center}
+
+\begin{quote}
+\newline
+\newline
+Każdemu człowiekowi jest dany klucz do bram raju. Tym samym kluczem otwiera się bramy do piekła.
+
+\end{quote}
+
+\begin{verbatim*}
+
+gwiazdkowa wersja otoczenia verbatim wyróżnia spacje w tekście
+
+\end{verbatim*}
+
+\begin{center}
+
+\begin{tabular}{|r|c|c|l|} \hline
+
+jeden & jeden & jeden & jeden \\
+
+dwa & dwa & dwa & dwa \\
+
+trzy & trzy & trzy & trzy \\
+
+\hline \hline
+
+1.2 & 1.2 & 1.2 & 1.2 \\ \hline
+
+\end{tabular}
+
+\end{center}
+
+\begin{tabular}{|p{4.2cm}|}\hline
+
+Ten akapit jest wewnątrz pudełka.
+
+Mamy nadzieje, że uzyskany efekt się podoba. \\ \hline
+
+\end{tabular}
+
+\begin{flushleft}
+
+\begin{tabular}{@{} l @{}} \hline
+
+bez odstępów na brzegach\\ \hline\
+
+\end{tabular}
+
+\begin{tabular}{l} \hline
+
+odstępy na brzegach\\ \hline
+
+\end{tabular}
+
+\end{flushleft}
+
+\begin{tabular}{c r @{,} l}
+
+Wyrażenie &
+
+\multicolumn{2}{c}{Wartość}\\ \hline
+
+$\pi$ & 3&1416 \\
+
+$\pi^{\pi}$ & 36&46 \\
+
+$(\pi^{\pi})^{\pi}$ & 80662&7 \\
+
+\end{tabular}
+
+\begin{tabular}{|c|c|c|c|l|}\hline
+
+1&\multicolumn{4}{c|}{0}\\
+
+\cline{2-4}
+
+1 & 2 & 3 & 4 & 5 \\ \cline{2-4}
+
+1 & 2 & 3 & 4 & 5 \\ \hline
+
+\end{tabular}
+
+Rysunek ~\ref{white} jest przykładem Pop-Artu.
+
+\begin{figure}[!htp]
+
+\makebox[\textwidth]{\framebox[6cm]{\rule{0pt}{6cm}}}
+
+\caption{sześć na sześć centymetrów\label{white} }
+
+\end{figure}
+
+\begin{figure}
+
+\centering
+
+\includegraphics[angle=360,width=0.5\textwidth]{szczur.jpg}
+
+\caption{szczur i kot\label{white} }
+
+\end{figure}
+
+$(a+b)^2=a^2+2ab+b^2
+
+
+~$\heartsuit$ ~$\heartsuit$ ~$\heartsuit$ ~$\heartsuit$ ~$\heartsuit$ ~$\heartsuit$ ~$\heartsuit$
+
+
+\begin{displaymath}
+
+\lim_{n \to \infty}
+
+\sum_{k=1}^n \frac{1}{k^2} = \frac{\pi^2}{6}
+
+\end{displaymath}
+
+
+\begin{equation}
+
+\forall x \in \mathbf{R}\colon
+
+\qquad x^{2} \geq 0
+
+\end{equation}
+
+
+$\lambda, \xi, \pi, \mu, \phi, \Omega$
+
+$a_{1} x^{2} e^{-\alpha t}
+a^{3}_{ij} e^{x^2} \neq {e^x}^2$
+$\sqrt{x} \sqrt{ x^{2}+\sqrt{y}}
+\sqrt[3]{2} \surd[x^2 + y^2]$
+\begin{displaymath}
+\left(\begin{array}{c|c}
+1 & 2 \\ \hline
+3 & 4
+\end{array}\right)
+\end{displaymath}
+\begin{displaymath}
+\mathop{\mathrm{cov}}(X,Y)=
+\frac{\displaystyle
+\sum_{i=1}^n(x_i-\overline x)
+(y_i-\overline y)}
+{\displaystyle\bigg1[
+\sum_{i=1}^n(x_i-\overline x)^2
+\sum_{i=1}^n(y_i-\overline y)^2
+\bigger]^{1/2}}
+\end{displaymath}
+
+\end{document}
