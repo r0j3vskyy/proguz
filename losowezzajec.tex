@@ -1,0 +1,237 @@
+\documentclass[a4paper]{article} 
+\usepackage{latexsym}
+\usepackage[MeX]{polski}
+\usepackage[utf8]{inputenc}% ew. utf8 lub cp1250
+\usepackage{textcomp}
+\usepackage[english, polish]{babel} % Dodanie języka polskiego do babel
+\usepackage{amsmath, amssymb}  % For \mathcal and \mathbb
+\usepackage{amsfonts}           % For \mathfrak
+\usepackage{enumitem}
+% Zdefiniowanie autora i tytułu:
+\author{H.~Szczególny}
+\title{Minimalizm}
+\frenchspacing
+\begin{document}
+% Wstawianie autora i tytułu do składu:
+\maketitle
+% Wstawianie spisu treści:
+\tableofcontents
+\section{Kilka spostrzeżeń na wstępie} % Poprawiono literówkę "spotrzerzeń"
+Właśnie zaczyna się mój cudowny artykuł.
+\section{Na pożegnanie}
+\ldots{} A~tu się on kończy.
+%cudzysłów
+``Please press the ‘x’ key.’’
+% Myślnik
+niebiesko{\dywiz}czarny % \dywiz dla krótkiego myślnika
+niebiesko--czarny % -- dla średniego myślnika
+$-2$%- matematyczny minus
+%tab
+http://www.rich.edu/\~{}bush \\%--tabulator
+http://www.clever.edu/$\sim$demo
+\texteuro \ldots\\ 
+%streszczenie
+\begin{abstract}
+Streszczenie streszczenia.\\
+\end{abstract}
+Pan~Kowalski ucieszył się\\
+na jej widok (zob.~Rys.~5).\\
+Podoba mi się JAVA\@. A~tobie?\\
+Odsyłacz do tego punktu
+\label{sec:this} wygląda tak:
+\footnote{Zobacz punkt \ref{sec:this}.}
+%wyróżnienie
+\emph{Patrz punkt}~\ref{sec:this} na
+stronie~\pageref{sec:this}.’’
+%stopka
+\footnote{Przypis}
+%lista
+\begin{enumerate}
+ \item Taka lista:
+ \begin{itemize}
+ \item[--] wygląda
+ \item[--] śmiesznie.
+ \end{itemize}
+ \item Pamiętaj:
+ \begin{description}
+ \item[Głupoty] nie staną się
+ mądrościami, gdy się je wyliczy.
+ \item[Mądrości] można elegancko
+ zestawiać w~wyliczeniach.
+ \end{description}
+\end{enumerate}
+%wycentrowanie
+\begin{center}
+To jest tekst\\wyśrodkowany.
+\end{center}
+\begin{verbatim*}
+gwiazdkowa wersja
+otoczenia verbatim
+wyróżnia spacje
+w tekście
+\end{verbatim*}
+%tabela
+\begin{tabular}{|r|l|} \hline
+7C0 & heksadecymalnie \\ \hline
+3700 & oktalnie \\ \hline
+11111000000 & binarnie \\ \hline \hline
+1984 & dziesiętnie \\ \hline
+\end{tabular}
+\begin{tabular}{|p{4.7cm}|} \hline
+Ten akapit jest wewnątrz pudełka. Mamy nadzieję, że uzyskany efekt się podoba.\\ \hline
+\end{tabular}\\
+\begin{tabular}{c r @{,} l}
+Wyrażenie & \multicolumn{2}{c}{Wartość}\\ \hline
+$\pi$ & 3 & 1416 \\ \hline
+$\pi^{\pi}$ & 36 & 46 \\ \hline
+$(\pi^{\pi})^{\pi}$ & 80662 & 7 \\ \hline
+\end{tabular}\\
+\begin{tabular}{|c|c|c|c|l|} \hline
+1 & \multicolumn{4}{c|}{0} \\ \cline{2-5}
+1 & 2 & 3 & 4 & 5 \\ \cline{2-4}
+1 & 2 & 3 & 4 & 5 \\ \hline
+\end{tabular}
+\\
+Dyr. E.~K.~Tor,\\ Przewodniczący
+Zastępcy\\
+\date{16 czerwca 1963~r.} 
+\\
+{\TeX} należy wymawiać jako
+$\tau\epsilon\chi$.\\[6pt]
+100~m$^{3}$ wody. \\
+To płynie z~mojego~$\heartsuit$\\
+Jest $-30\,^{\circ}\mathrm{C}$.
+Niedługo zacznę nadprzewodzić.\hbox to 5cm{A}
+$a$ do kwadratu plus~$b$
+do kwadratu równa się~$c$
+do kwadratu.\\ Albo, stosując
+bardziej matematyczne
+podejście: $c^{2}=a^{2}+b^{2}$.\\[6pt]
+$\lim_{n \to \infty}
+\sum_{k=1}^n \frac{1}{k^2}
+= \frac{\pi^2}{6}$\\
+\begin{equation}
+\forall x \in \mathbf{R}\colon
+\qquad x^{2} \geq 0
+\end{equation}
+%litery greckie
+% \\ $\lambda,\xi,\pi,\mu,\Phi,\Omega$
+$\overline{m+n}\underline{x+y}$\\[6pt]
+$\underbrace{a+b+\cdots+z}_{26}$
+\begin{displaymath}
+\hat{y}=x^{2}\quad y' = 2x'''
+\end{displaymath}
+$\sqrt{x} \sqrt{ x^{2}+\sqrt{y}}
+ \sqrt[3]{2} \surd[x^2 + y^2]$
+ \begin{displaymath}
+ \vec a\quad\overrightarrow{AB}\\[6pt]
+ \end{displaymath}
+ \begin{displaymath}
+ \mathbf{X} =
+ \left( \begin{array}{ccc}
+ x_{11} & x_{12} & \ldots \\
+ x_{21} & x_{22} & \ldots \\
+ \vdots & \vdots & \ddots
+ \end{array} \right)
+ \end{displaymath}
+$x\equiv a \pmod{b}$
+%kroje pisma
+\textbf{ABCdef}
+\textit{ABCdef}
+$\mathcal{ABC}$
+$\mathfrak{ABCdef}$
+$\textsf{ABC}$
+$\mathbb{ABC}$
+\\The main Theorem says that $
+\mathcal{P}(\lambda) := \lim_{n \to \infty} \mathcal{P}_n(\lambda)
+$
+ Pn $(\lambda)$ exists and is a holomorphic
+ function of $\lambda$ in the domain  $\{ \operatorname{Re} \lambda > 0 \}$ as well as in some other regions
+ \\ \textbf{Twierdzenie 1} (Wielkie twierdzenie Ferma) dla liczby naturalnej $n > 2$ nie
+ istnieje takie liczby naturalne dodatnie x,y,z które spełniałyby równanie
+ $x^n +y^n =z^n$
+ Dowód. W rzeczywistości dowód twierdzenia Fermata przeprowadzony przez
+ Wilesa ma dosyć długie historie
+\\ \textbf{Defnicja.} Liczby naturalne liczby służące podawaniu liczności (trzy osoby,
+ zob. liczebnik główny/kardynalny) i ustalania kolejności (trzecia osoba, zob.
+ liczebnik porządkowy).
+
+ Taka lista:
+ \begin{itemize}
+ \item Czekolada
+ \item Kawa
+\item Mleko
+ \end{itemize}
+\ Lista zakupów
+ \begin{enumerate}
+\item Czekolada
+\item Kawa
+\item Ciasto
+  \end{enumerate}
+\section*{Spis zakupów}
+
+\begin{enumerate}[label=\arabic*.]
+    \item Warzywa
+    \begin{enumerate}[label=\alph*)]
+        \item Pomidory
+        \item Ogórki
+        \item Marchew
+    \end{enumerate}
+    
+    \item Owoce
+    \begin{enumerate}[label=\Roman*.]
+        \item Jabłka
+        \item Banany
+        \item Winogrona
+    \end{enumerate}
+    
+    \item Nabiał
+    \begin{enumerate}[label=\roman*)]
+        \item Mleko
+        \item Ser
+        \item Jogurt
+    \end{enumerate}
+    
+    \item Pieczywo
+    \begin{enumerate}[label=\Alph*)]
+        \item Chleb
+        \item Bułki
+        \item Rogale
+    \end{enumerate}
+\end{enumerate}
+\begin{align}
+|\psi_{1,2}|^2 &= \left| 1 + \frac{LC \lambda^2}{2} \pm i \sqrt{-LC \lambda^2 - \left( \frac{LC \lambda^2}{2} \right)^2} \right|^2 \nonumber \\
+&= \left( 1 + \frac{LC \lambda^2}{2} \right)^2 - LC \lambda^2 - \left( \frac{LC \lambda^2}{2} \right)^2 = 1. \tag{1}
+\end{align}
+
+$$\left\{\begin{array}{rcl}
+x+y&=&5\\
+x-2y&=&8\\
+\end{array} \right.$$
+\\
+$$f(x)=\left\{\begin{array}{rcl}
+\frac {x+5}{12}&dla&x>0\\
+x^2 + x - 5&dla&x\leq0\\
+\end{array} \right.$$
+$$A=\left[\begin{array}{ccc}
+12&3&-10\\
+x&-15&0\\
+2.5&-23&12
+\end{array}\right]$$
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|}
+cell1 & cell2 & cell3 \\ 
+cell4 & cell5 & cell6 \\ 
+cell7 & cell8 & cell9 \\ 
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|}\hline
+Numer & Album & Imie i nazwisko & ocena \\  \hline
+1 & 11111 & Jan &\cr Kowalski & 5 \\  \hline
+cell7 & cell8 & cell9 \\  \hline
+\end{tabular}
+\end{table}
+\end{document}
