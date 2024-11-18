@@ -1,0 +1,74 @@
+1. Załaduj pakiet graphicx
+W nagłówku dokumentu dodaj:
+
+latex
+Skopiuj kod
+\usepackage{graphicx}
+2. Wstawianie obrazka
+Użyj środowiska figure i komendy \includegraphics.
+
+Przykład podstawowy:
+latex
+Skopiuj kod
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{nazwa_pliku.jpg}
+    \caption{Opis obrazka}
+    \label{fig:moj-obrazek}
+\end{figure}
+Wyjaśnienie:
+\centering: Centruje obrazek.
+width=0.5\textwidth: Ustawia szerokość obrazka na 50% szerokości strony. Możesz zmieniać tę wartość (np. 0.8\textwidth lub 5cm).
+nazwa_pliku.jpg: Ścieżka do pliku obrazka. Plik musi znajdować się w tym samym folderze co dokument .tex, chyba że podasz pełną ścieżkę.
+\caption: Dodaje podpis pod obrazkiem.
+\label: Dodaje etykietę do odwołań w tekście (np. \ref{fig:moj-obrazek}).
+3. Wstawianie obrazka bez podpisu
+Jeśli nie potrzebujesz podpisu ani etykiety, użyj samego \includegraphics:
+
+latex
+Skopiuj kod
+\includegraphics[width=0.8\textwidth]{nazwa_pliku.jpg}
+4. Format plików graficznych
+LaTeX obsługuje następujące formaty plików:
+
+PDF: Najlepszy dla grafiki wektorowej.
+JPG/JPEG: Dobre dla zdjęć.
+PNG: Dobre dla grafiki z przejrzystością.
+5. Przykład z pełnym dokumentem
+latex
+Skopiuj kod
+\documentclass{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+Przykład wstawiania obrazka:
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{nazwa_pliku.jpg}
+    \caption{Przykładowy obrazek w LaTeX}
+    \label{fig:przyklad}
+\end{figure}
+
+Możesz odwołać się do obrazka, pisząc np. "Zobacz rysunek \ref{fig:przyklad}".
+
+\end{document}
+6. Ustawianie położenia obrazka
+Aby kontrolować położenie obrazka na stronie, możesz użyć parametrów w figure:
+
+[h]: Umieszcza obrazek tuż przy miejscu w kodzie.
+[t]: Umieszcza obrazek na górze strony.
+[b]: Umieszcza obrazek na dole strony.
+[p]: Umieszcza obrazek na osobnej stronie przeznaczonej dla obrazków.
+Przykład:
+latex
+Skopiuj kod
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{nazwa_pliku.jpg}
+    \caption{Obrazek umieszczony w kodzie.}
+\end{figure}
+7. Kompilacja dokumentu
+Jeśli używasz obrazków w formacie JPG lub PNG, użyj PDFLaTeX do kompilacji.
+Jeśli pracujesz z grafiką wektorową (np. pliki PDF), również PDFLaTeX jest odpowiedni.

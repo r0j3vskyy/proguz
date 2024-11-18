@@ -1,0 +1,75 @@
+1. Podstawowy przypis dolny
+Użyj komendy \footnote{tekst przypisu} w dowolnym miejscu w dokumencie:
+
+latex
+Skopiuj kod
+To jest przykładowy tekst z przypisem\footnote{To jest tekst przypisu dolnego.}.
+Wynik:
+Tekst w dokumencie będzie wyglądał tak:
+
+To jest przykładowy tekst z przypisem¹.
+A na dole strony znajdzie się przypis: ¹ To jest tekst przypisu dolnego.
+
+2. Pełny przykład dokumentu
+latex
+Skopiuj kod
+\documentclass{article}
+
+\begin{document}
+
+Przykład użycia przypisów dolnych w LaTeX.  
+Pierwszy przypis\footnote{To jest pierwszy przypis.}, a tutaj drugi przypis\footnote{To jest drugi przypis.}.
+
+\end{document}
+Wynik:
+Pierwszy przypis znajdzie się na dole strony, w której pojawia się komenda.
+Numery przypisów będą nadawane automatycznie.
+3. Przypisy z niestandardowym formatowaniem
+a. Zmiana symboli przypisów:
+Jeśli chcesz używać symboli zamiast liczb, np. *, †, możesz użyć:
+
+latex
+Skopiuj kod
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+Przykład:
+latex
+Skopiuj kod
+\documentclass{article}
+
+\begin{document}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+Przykład z symbolem przypisu\footnote{To jest przypis z symbolem.}.
+
+\end{document}
+b. Przywracanie standardowej numeracji:
+Aby wrócić do domyślnej numeracji liczbami, dodaj:
+
+latex
+Skopiuj kod
+\renewcommand{\thefootnote}{\arabic{footnote}}
+4. Przypisy w tytułach sekcji
+Przypisy dolne w tytułach mogą powodować błędy w spisie treści. Aby to naprawić, użyj:
+
+latex
+Skopiuj kod
+\section{Tytuł sekcji\footnote{Przypis do tytułu}}
+\addtocounter{footnote}{-1}
+5. Przykład z przypisami w dokumencie
+latex
+Skopiuj kod
+\documentclass{article}
+
+\begin{document}
+
+LaTeX to wspaniałe narzędzie do tworzenia dokumentów\footnote{LaTeX to system składu tekstu.}.
+Jest szeroko używany w nauce\footnote{Szczególnie w matematyce, fizyce i informatyce.}.
+
+\section{Historia LaTeX\footnote{Historia rozpoczęła się w 1984 roku.}}
+Pierwsza wersja LaTeX została opracowana przez Lesliego Lamporta.
+
+\end{document}
+6. Kilka dodatkowych wskazówek
+Jeśli przypis jest zbyt długi, LaTeX automatycznie rozdzieli go na kolejne linie.
+W przypadku dużej liczby przypisów w dokumencie warto użyć pakietu footmisc do bardziej zaawansowanego formatowania przypisów.

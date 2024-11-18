@@ -1,0 +1,97 @@
+1. Lista numerowana
+Użyj środowiska enumerate:
+
+latex
+Skopiuj kod
+\begin{enumerate}
+    \item Pierwszy element
+    \item Drugi element
+    \item Trzeci element
+\end{enumerate}
+Wynik:
+Pierwszy element
+Drugi element
+Trzeci element
+2. Lista nienumerowana
+Użyj środowiska itemize:
+
+latex
+Skopiuj kod
+\begin{itemize}
+    \item Pierwszy element
+    \item Drugi element
+    \item Trzeci element
+\end{itemize}
+Wynik:
+Pierwszy element
+Drugi element
+Trzeci element
+3. Lista zagnieżdżona
+Możesz zagnieżdżać listy (numerowane w nienumerowanych i odwrotnie):
+
+latex
+Skopiuj kod
+\begin{itemize}
+    \item Pierwszy element
+    \item Drugi element
+    \begin{enumerate}
+        \item Pierwszy element zagnieżdżony
+        \item Drugi element zagnieżdżony
+    \end{enumerate}
+    \item Trzeci element
+\end{itemize}
+Wynik:
+Pierwszy element
+Drugi element
+Pierwszy element zagnieżdżony
+Drugi element zagnieżdżony
+Trzeci element
+4. Niestandardowe oznaczenia list
+Zmiana symboli w itemize:
+Możesz zmienić symbole, używając komendy \item[]:
+
+latex
+Skopiuj kod
+\begin{itemize}
+    \item[$\star$] Element z gwiazdką
+    \item[$\bullet$] Element z kropką
+    \item[$\rightarrow$] Element ze strzałką
+\end{itemize}
+Zmiana stylu numeracji w enumerate:
+Użyj opcji stylu w enumerate:
+
+latex
+Skopiuj kod
+\begin{enumerate}[label=\alph*.]
+    \item Pierwszy element
+    \item Drugi element
+    \item Trzeci element
+\end{enumerate}
+Wynik:
+a. Pierwszy element
+b. Drugi element
+c. Trzeci element
+
+5. Przykład w pełnym dokumencie
+latex
+Skopiuj kod
+\documentclass{article}
+\usepackage{enumitem} % opcjonalnie, do zmiany stylu numeracji
+
+\begin{document}
+
+Lista numerowana:
+\begin{enumerate}
+    \item Pierwszy element
+    \item Drugi element
+    \item Trzeci element
+\end{enumerate}
+
+Lista nienumerowana:
+\begin{itemize}
+    \item Pierwszy element
+    \item Drugi element
+    \item Trzeci element
+\end{itemize}
+
+\end{document}

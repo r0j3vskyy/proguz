@@ -1,0 +1,92 @@
+1. Wstawienie spisu treści
+Użyj komendy \tableofcontents w miejscu, gdzie chcesz, aby spis treści się pojawił. Na przykład:
+
+latex
+Skopiuj kod
+\documentclass{article}
+
+\begin{document}
+
+\tableofcontents % Spis treści
+
+\section{Wprowadzenie}
+Treść sekcji wprowadzenie.
+
+\section{Metodyka}
+Treść sekcji metodyka.
+
+\subsection{Eksperyment}
+Treść podsekcji eksperyment.
+
+\section{Podsumowanie}
+Treść sekcji podsumowanie.
+
+\end{document}
+2. Automatyczne generowanie spisu treści
+Spis treści generowany jest automatycznie na podstawie sekcji (\section), podsekcji (\subsection), i niższych poziomów (\subsubsection).
+
+Przykładowe poziomy:
+section: Główna sekcja.
+subsection: Podsekcja.
+subsubsection: Pod-podsekcja.
+3. Kompilacja dokumentu
+Spis treści wymaga dwóch przebiegów kompilacji:
+
+Pierwszy przebieg tworzy plik pomocniczy ze strukturą dokumentu.
+Drugi przebieg wypełnia spis treści.
+Jeśli używasz narzędzia takiego jak Overleaf:
+Kliknij "Recompile" dwukrotnie, aby zobaczyć spis treści.
+4. Dodanie tytułu spisu treści
+Jeśli chcesz zmienić tytuł spisu treści, użyj komendy:
+
+latex
+Skopiuj kod
+\renewcommand{\contentsname}{Spis treści}
+Przykład:
+latex
+Skopiuj kod
+\renewcommand{\contentsname}{Mój spis treści}
+\tableofcontents
+5. Dodanie spisu treści w spisie treści
+Jeśli chcesz, aby spis treści sam pojawił się w spisie, dodaj przed \tableofcontents sekcję:
+
+latex
+Skopiuj kod
+\section*{Spis treści}
+\addcontentsline{toc}{section}{Spis treści}
+\tableofcontents
+6. Dostosowanie głębokości spisu treści
+Możesz kontrolować, które poziomy (sekcje, podsekcje) będą widoczne w spisie treści, używając komendy:
+
+latex
+Skopiuj kod
+\setcounter{tocdepth}{n}
+Przykład:
+n = 1: Tylko sekcje.
+n = 2: Sekcje i podsekcje.
+n = 3: Sekcje, podsekcje, i pod-podsekcje.
+7. Pełny przykład dokumentu
+latex
+Skopiuj kod
+\documentclass{report}
+
+\setcounter{tocdepth}{2} % Uwzględniaj sekcje i podsekcje
+
+\begin{document}
+
+\renewcommand{\contentsname}{Spis treści} % Zmień tytuł spisu treści
+\tableofcontents
+
+\chapter{Wprowadzenie}
+Treść wprowadzenia.
+
+\section{Cel pracy}
+Treść sekcji celu pracy.
+
+\subsection{Zakres badań}
+Treść podsekcji zakresu badań.
+
+\chapter{Podsumowanie}
+Treść podsumowania.
+
+\end{document}

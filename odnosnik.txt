@@ -1,0 +1,52 @@
+1. Załaduj pakiet hyperref
+Dodaj w nagłówku dokumentu:
+
+latex
+Skopiuj kod
+\usepackage{hyperref}
+2. Tworzenie odnośników do linków zewnętrznych
+a. Link jako tekst:
+Użyj komendy \href{adres}{tekst}:
+
+latex
+Skopiuj kod
+\href{https://www.example.com}{Kliknij tutaj, aby odwiedzić Example.com}
+b. Wyświetlenie samego linku:
+Możesz po prostu użyć adresu URL jako tekstu:
+
+latex
+Skopiuj kod
+\href{https://www.example.com}{https://www.example.com}
+c. Link na osobnej linii:
+Aby link pojawił się na osobnej linii, można użyć komendy \url{adres}:
+
+latex
+Skopiuj kod
+\url{https://www.example.com}
+3. Pełny przykład dokumentu
+latex
+Skopiuj kod
+\documentclass{article}
+\usepackage{hyperref}
+
+\begin{document}
+
+Odwiedź stronę \href{https://www.example.com}{Example.com} lub kliknij tutaj: \url{https://www.example.com}.
+
+\end{document}
+Wynik:
+Tekst "Example.com" będzie klikalny.
+Adres URL wyświetlony za pomocą \url{} również będzie klikalny.
+4. Dostosowanie wyglądu linków
+a. Kolorowe linki:
+Możesz ustawić kolory dla odnośników, używając opcji colorlinks:
+
+latex
+Skopiuj kod
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=red]{hyperref}
+b. Ukrycie ramek wokół linków:
+Aby usunąć ramki wokół linków, użyj opcji hidelinks:
+
+latex
+Skopiuj kod
+\usepackage[hidelinks]{hyperref}
