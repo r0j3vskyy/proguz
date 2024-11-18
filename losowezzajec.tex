@@ -235,3 +235,230 @@ cell7 & cell8 & cell9 \\  \hline
 \end{tabular}
 \end{table}
 \end{document}
+----------------------------------------------------------------------------------
+Poniżej znajduje się omówienie głównych linii kodu użytego w podanym przykładzie:
+
+1. **\documentclass[a4paper]{article}**  
+   - Definiuje klasę dokumentu jako `article` i ustawia format strony na A4.
+
+2. **\usepackage{latexsym}**  
+   - Umożliwia korzystanie z dodatkowych symboli matematycznych i specjalnych.
+
+3. **\usepackage[MeX]{polski}**  
+   - Konfiguruje dokument dla języka polskiego, używając specyfikacji `MeX` dla odpowiedniej obsługi języka.
+
+4. **\usepackage[utf8]{inputenc}**  
+   - Ustawia kodowanie znaków na UTF-8, umożliwiając korzystanie z polskich znaków diakrytycznych.
+
+5. **\usepackage{textcomp}**  
+   - Wprowadza dodatkowe symbole tekstowe, takie jak znaki walut.
+
+6. **\usepackage[english, polish]{babel}**  
+   - Umożliwia przełączanie między językami (angielski i polski) w dokumencie.
+
+7. **\usepackage{amsmath, amssymb}**  
+   - Zapewnia rozszerzone funkcje matematyczne i dodatkowe symbole matematyczne.
+
+8. **\usepackage{amsfonts}**  
+   - Udostępnia dodatkowe kroje pisma matematycznego, np. $\mathfrak$, $\mathcal$.
+
+9. **\usepackage{enumitem}**  
+   - Pozwala na zaawansowane formatowanie list (numerowanych, nienumerowanych, opisowych).
+
+10. **\author{H.~Szczególny}**  
+    - Ustawia autora dokumentu jako "H. Szczególny".
+
+11. **\title{Minimalizm}**  
+    - Ustawia tytuł dokumentu na "Minimalizm".
+
+12. **\frenchspacing**  
+    - Ustawia mniejsze odstępy po kropkach, zgodne z typografią europejską.
+
+13. **\maketitle**  
+    - Wstawia na początku dokumentu tytuł, autora i datę (jeśli podano).
+
+14. **\tableofcontents**  
+    - Generuje automatyczny spis treści na podstawie sekcji w dokumencie.
+
+15. **\section{...}**  
+    - Tworzy nową sekcję z podanym tytułem.
+
+16. **``Please press the ‘x’ key.’’**  
+    - Przykład użycia cudzysłowów w stylu amerykańskim (podwójnych) i brytyjskim (pojedynczych).
+
+17. **\dywiz, --, -**  
+    - Różne długości myślników: krótki łącznik (\dywiz), średni myślnik (--), minus matematyczny ($-$).
+
+18. **\begin{abstract} ... \end{abstract}**  
+    - Definiuje streszczenie dokumentu.
+
+19. **\footnote{...}**  
+    - Wstawia przypis dolny.
+
+20. **\begin{enumerate}, \begin{itemize}, \begin{description}**  
+    - Tworzy listy numerowane, punktowane oraz opisowe.
+
+21. **\begin{verbatim*} ... \end{verbatim*}**  
+    - Środowisko `verbatim` wyświetla kod w surowym formacie, ignorując interpretację poleceń LaTeX.
+
+22. **\begin{tabular}{|c|c|c|} ... \end{tabular}**  
+    - Definiuje tabelę z kolumnami i liniami siatki.
+
+23. **\begin{table}[h!] ... \end{table}**  
+    - Definiuje tabelę w otoczeniu pływającym, umożliwiając automatyczne rozmieszczenie na stronie.
+
+24. **\mathcal, \mathfrak, \mathbb**  
+    - Różne style matematyczne dla liter (kaligrafowane, gotyckie, podwójnie kreskowane).
+
+25. **$c^2 = a^2 + b^2$**  
+    - Przykład równania matematycznego.
+
+26. **\label, \ref, \pageref**  
+    - Służą do etykietowania, odsyłania i wskazywania numeru strony dla odniesień w dokumencie.
+
+27. **\begin{align} ... \end{align}**  
+    - Środowisko do wielowierszowych równań matematycznych z wyrównaniem.
+
+Oto szczegółowe omówienie dalszych linii kodu:
+
+---
+
+### Matematyka i struktury matematyczne
+
+28. **\begin{align} ... \end{align}**
+   - Środowisko do układania równań w kolumnach z możliwością wyrównania.
+   - `\tag{1}` oznacza nadanie równań niestandardowego numeru lub etykiety.
+
+29. **$$\left\{\begin{array}{rcl} ... \end{array}\right.$$**
+   - Układ równań w środowisku macierzowym.
+   - `rcl` oznacza wyrównanie: `right`, `center`, `left`.
+
+30. **f(x) = \left\{\begin{array}{rcl} ... \end{array}\right.**
+   - Definiowanie funkcji wieloczęściowej:
+     - Pierwsza część funkcji dla $x > 0$.
+     - Druga część funkcji dla $x \leq 0$.
+
+31. **\begin{array}{ccc} ... \end{array}**
+   - Definiowanie macierzy w trzech kolumnach (`ccc` - trzy wyśrodkowane kolumny).
+
+---
+
+### Tabele
+
+32. **\begin{table}[h!] ... \end{table}**
+   - Środowisko pływające do tworzenia tabel. `[h!]` sugeruje umieszczenie tabeli "tuż tutaj", w miarę możliwości.
+
+33. **\begin{tabular}{|c|c|c|} ... \end{tabular}**
+   - Tworzenie prostej tabeli:
+     - `|` oznacza pionowe linie między kolumnami.
+     - `c` oznacza wyrównanie kolumny do środka.
+
+34. **\begin{tabular}{|p{4.7cm}|} ... \end{tabular}**
+   - Tabela z jedną kolumną o ustalonej szerokości (4.7 cm).
+   - Przydatne do dłuższych tekstów wewnątrz komórek tabeli.
+
+35. **\begin{tabular}{c r @{,} l}**
+   - Tworzenie tabeli z kolumnami:
+     - `c` - wyśrodkowana kolumna.
+     - `r` - kolumna wyrównana do prawej.
+     - `@{,}` - dodanie separatora przecinka między kolumnami.
+
+36. **\multicolumn{2}{c}{...}**
+   - Łączenie dwóch kolumn w jednej komórce tabeli i wyrównanie jej zawartości do środka.
+
+37. **\cline{2-4}**
+   - Rysowanie poziomej linii tabeli obejmującej wybrane kolumny (od 2 do 4).
+
+---
+
+### Tekst i formatowanie
+
+38. **\textbf{ABCdef}**
+   - Tekst w pogrubieniu.
+
+39. **\textit{ABCdef}**
+   - Tekst kursywą.
+
+40. **$\mathcal{ABC}$**
+   - Kaligrafowane litery.
+
+41. **$\mathfrak{ABCdef}$**
+   - Gotyckie litery.
+
+42. **$\textsf{ABC}$**
+   - Litery bezszeryfowe (sans-serif).
+
+43. **$\mathbb{ABC}$**
+   - Litery podwójnie kreskowane (np. do oznaczania zbiorów liczb $\mathbb{R}$, $\mathbb{N}$).
+
+44. **\mathcal{P}(\lambda) := \lim_{n \to \infty} \mathcal{P}_n(\lambda)**
+   - Definiowanie funkcji matematycznej z użyciem symboli kaligrafowanych.
+
+45. **\textbf{Twierdzenie 1}**
+   - Wprowadzenie twierdzenia z oznaczeniem w pogrubieniu.
+
+46. **$x^n + y^n = z^n$**
+   - Równanie matematyczne w środowisku liniowym.
+
+47. **\begin{description}**
+   - Lista opisowa z etykietami, np.:
+     - Głupoty
+     - Mądrości
+
+48. **\begin{enumerate}[label=\arabic*.]**
+   - Numerowana lista z etykietami numerycznymi (1., 2., 3.).
+
+49. **\begin{enumerate}[label=\alph*)]**
+   - Numerowana lista z etykietami literowymi (a), b), c)).
+
+50. **\begin{enumerate}[label=\Roman*.]**
+   - Numerowana lista z etykietami rzymskimi (I., II., III.).
+
+51. **\begin{enumerate}[label=\roman*)]**
+   - Numerowana lista z etykietami rzymskimi małymi (i), ii), iii)).
+
+52. **\begin{enumerate}[label=\Alph*)]**
+   - Numerowana lista z dużymi literami (A), B), C)).
+
+---
+
+### Symbolika matematyczna
+
+53. **\tau\epsilon\chi**
+   - Wyświetla "TeX" z symbolami greckimi.
+
+54. **$c^2 = a^2 + b^2$**
+   - Twierdzenie Pitagorasa w zapisie matematycznym.
+
+55. **$\sqrt{x}$, $\sqrt[3]{2}$, \surd[x^2 + y^2]**
+   - Różne sposoby zapisu pierwiastków.
+
+56. **\begin{displaymath} \hat{y}=x^2, y'=2x''' \end{displaymath}**
+   - Wyrażenia matematyczne z użyciem symboli $\hat{}$ (daszek) oraz pochodnych.
+
+57. **\mathbf{X} = \left( \begin{array}{ccc} ... \end{array} \right)**
+   - Definicja macierzy prostokątnej.
+
+58. **$x \equiv a \pmod{b}$**
+   - Zapis kongruencji.
+
+---
+
+### Przykłady zaawansowane
+
+59. **\begin{align} \lim_{n \to \infty} \sum_{k=1}^n \frac{1}{k^2} = \frac{\pi^2}{6} \end{align}**
+   - Zapis wzoru na sumę szeregów.
+
+60. **\underbrace{a+b+\cdots+z}_{26}**
+   - Zastosowanie podkreślenia do oznaczenia liczby elementów.
+
+61. **\vec{a}, \overrightarrow{AB}**
+   - Wektory w matematyce.
+
+62. **The main Theorem says that $\mathcal{P}(\lambda)$ ...**
+   - Definicja funkcji $\mathcal{P}$ i jej własności w kontekście analizy.
+
+63. **\begin{table}[h!] \centering ... \end{table}**
+   - Tabela wielokolumnowa dla różnych danych, np. studentów lub wyników.
+
+
