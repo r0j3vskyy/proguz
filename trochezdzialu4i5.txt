@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}       % Wstawianie grafiki EPS i innych formatów
+\usepackage{amsmath}        % Dodatkowe wsparcie matematyczne
+\usepackage{makeidx}        % Tworzenie indeksu
+\usepackage{hyperref}       % Tworzenie hiperłączy w pliku PDF
+
+% Generowanie indeksu
+\makeindex
+
+\begin{document}
+
+\title{Rozbudowany Przykład Dokumentu w LaTeX}
+\author{}
+\date{}
+\maketitle
+
+\tableofcontents % Spis treści
+
+\section{Wprowadzenie}
+Ten dokument jest przykładem rozbudowanego dokumentu LaTeX z różnymi funkcjonalnościami. Zawiera m.in. grafikę, bibliografię, skorowidz oraz spis treści.
+
+\section{Tworzenie grafiki przy użyciu środowiska \texttt{picture}}
+
+Poniżej przedstawiamy przykładowe rysunki, używając różnych komend w LaTeX do tworzenia grafiki matematycznej.
+
+\begin{picture}(200,150)
+    % Ustawienie grubości linii
+    \linethickness{0.5mm}
+    
+    % Rysowanie linii
+    \put(10,10){\line(1,0){50}} % pozioma linia o długości 50
+    \put(10,10){\line(0,1){50}} % pionowa linia o długości 50
+    
+    % Rysowanie strzałki
+    \put(70,10){\vector(1,0){50}} % pozioma strzałka o długości 50
+    
+    % Rysowanie okręgu
+    \put(10,80){\circle{30}} % okrąg o średnicy 30
+    \put(70,80){\circle*{30}} % wypełniony okrąg o średnicy 30
+    
+    % Rysowanie owalu
+    \put(130,80){\oval(40,20)} % owal o szerokości 40 i wysokości 20
+    
+    % Rysowanie krzywej Béziera
+    \qbezier(10,120)(40,150)(70,120) % krzywa Béziera między punktami
+    
+    % Rysowanie wielokrotnych obiektów
+    \multiput(100,10)(10,10){5}{\circle*{5}} % pięć punktów wzdłuż linii
+    
+    % Ustawienie grubości linii i narysowanie linii
+    \thinlines
+    \put(10,130){\line(1,1){40}} % cienka linia
+    
+    \thicklines
+    \put(10,140){\line(1,0){40}} % gruba linia
+\end{picture}
+
+\section{Wstawianie grafiki z pliku}
+\label{sec:graphics}
+
+Grafikę można również wstawiać z zewnętrznych plików graficznych. Poniżej przykład wstawienia grafiki w formacie EPS. 
+Możesz użyć pliku EPS lub innych wspieranych formatów, zamieniając nazwę pliku.
+
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{nazwa_pliku.jpg}
+    \caption{Opis obrazka}
+    \label{fig:nazwa_etykiety}
+\end{figure}
+
+Aby zobaczyć więcej na temat wstawiania grafiki, przejdź do sekcji \ref{sec:graphics}.
+
+\section{Odwołania i indeksy}
+Aby stworzyć indeks, można użyć komendy \texttt{\textbackslash index\{hasło\}}. Przykład znajdziesz poniżej:
+\index{przykład indeksu}
+
+\section{Przykład wyrażenia matematycznego}
+Wyrażenia matematyczne mogą być złożone za pomocą LaTeX-a. Na przykład:
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+\section{Bibliografia i cytowanie}
+Bibliografia jest kluczowa w dokumentach naukowych. Możemy odwoływać się do źródeł za pomocą komendy \texttt{\textbackslash cite}. Przykładowa pozycja bibliograficzna jest podana poniżej:
+
+\begin{thebibliography}{9}
+    \bibitem{latexcompanion} 
+    M. Goossens, F. Mittelbach, and A. Samarin, 
+    \textit{The \LaTeX\ Companion}, 
+    Addison-Wesley, 1993.
+
+    \bibitem{texbook} 
+    D. Knuth, 
+    \textit{The \TeX book}, 
+    Addison-Wesley, 1984.
+\end{thebibliography}
+
+Dokument ten odwołuje się do klasycznych książek, takich jak \cite{latexcompanion} i \cite{texbook}.
+
+% Wstawienie indeksu
+\printindex
+
+\end{document}
