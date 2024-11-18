@@ -1,0 +1,222 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{multirow}
+
+\title{Wszystko co potrzebne w LaTeX}
+\author{imie}
+\date{\today}
+
+\begin{document}
+
+% Tytuł dokumentu
+\maketitle
+
+% Zmiana tytułu spisu treści
+\renewcommand{\contentsname}{Spis treści}
+
+% Spis treści
+\tableofcontents
+\newpage
+
+% Sekcja: Łamanie linii i znaki specjalne
+\section{Łamanie linii}	
+To polega mniej więcej na tym:\\
+Teraz poszło to do dolnej linijki. \\
+A teraz jest akapit.
+
+To jest nowy akapit, bo mamy pustą linię powyżej. \\
+\indent i teraz tez jest nowy akapit
+
+\subsection{znaki specjalne}
+ąęćżńół
+
+\$ \& ! @ \#
+
+\section{listy}
+\subsection{lista punktowana}
+\begin{itemize}
+	\item pierwszy wiersz
+	\item drugi wiersz
+	\item trzeci wiersz
+\end{itemize}
+
+\subsection{lista numerowana}
+
+\begin{enumerate}
+	\item pierwszy wiersz
+	\item drugi wiersz
+	\item trzeci wiersz
+\end{enumerate}
+
+\section{matematyka}
+
+\subsection{matematyka liniowa}
+wzór pitagorasa: $  a^2 + b^2 = c^2 $
+poza tym wszystkie inne znaki są na poradniku
+
+\subsection{matematyka w bloku}
+
+\[
+    f(x) = ax^2 + bx + c
+\]
+
+\subsection{akcenty matematyczne}
+Akcenty matematyczne:
+\[
+    \hat{x}, \vec{v}, \dot{x}, \sqrt{x+y}, \int_0^\infty x^2 dx
+\]
+
+\subsection{macierze}
+
+\begin{displaymath} \mathbf{X} = \left( 
+\begin{array}{ccc} x_{11} & x_{12} & \ldots \\
+ x_{21} & x_{22} & \ldots \\ \vdots & \vdots & \ddots
+\end{array} \right) 
+\end{displaymath}
+
+\subsection{układ równań y}
+
+\begin{displaymath} y = \left\{ 
+\begin{array}{ll} a & \textrm{jeżeli $d>c$}\\
+ b+x & \textrm{rano}\\ l & \textrm{w~ciągu dnia} 
+\end{array} \right. 
+\end{displaymath}
+
+\subsection{układ równań}
+
+\[
+\begin{cases}
+x + y = (5 + n^4) \\
+x - y = 1 + (k - l^n)
+\end{cases}
+\]
+
+\subsection{znak E}
+
+\[ \sum_{i=1}^{n} = \frac{(n - 1)}{6} 
+\]
+
+Wewnątrz akapitu suma może być napisana jako \( \sum_{k=1}^n a_n \) albo jako \( \sum\limits_{k=1}^n a_n \),
+
+\subsection{całki}
+
+\[ \int ^ n _ c = 6
+\]
+
+\subsection{całki podwójne}
+
+\newcommand{\ud}{\mathrm{d}} 
+\begin{displaymath} \int\!\!\!\int_{D} g(x,y) \, \ud x\, \ud y \end{displaymath}
+
+\subsection{pi}
+
+iloczyn jako \( \prod_{k=1}^n a_n \) albo \( \prod\limits_{k=1}^n a_n \).
+
+
+\section{style pisma}
+
+\textbf{Pogrubienie}, \textit{Kursywa}, \underline{Podkreślenie}, \texttt{Monospace}.
+
+\section{Wyrównanie tekstu}
+\begin{center}
+    Tekst wyśrodkowany
+\end{center}
+
+\begin{flushleft}
+    Tekst wyrównany do lewej
+\end{flushleft}
+
+\begin{flushright}
+    Tekst wyrównany do prawej
+\end{flushright}
+
+\section{Przypis dolny}
+To jest przykład przypisu\footnote{Przykładowy przypis dolny.}.
+
+\section{Notatka na marginesie}
+To jest tekst z notatką na marginesie\marginpar{Notatka na marginesie}.
+
+\section{bibliografia}
+
+jeszcze nie mam pojecia jak to zrobić
+
+
+\begin{thebibliography}{99}
+\bibitem{latex} Leslie Lamport,
+  \emph{LaTeX: A Document Preparation System},
+  Addison-Wesley, 1986.
+\end{thebibliography}
+
+
+przyklad cytowania \cite{latex} ma miesce tam
+% 99: Szerokość miejsca na etykiety (np. [1], [12]).
+
+\section{odsyłacze}
+
+tego tez nie wiem 
+
+Rysunek \ref{fig:obrazek1} ilustruje przykład. \\
+tabela \ref{tab:przyklad} pokazuje gówno 
+\section{obrazek}
+\subsection{wstawianie obrazka}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{obrazek.jpg}
+    \caption{Przykład obrazka}
+    \label{fig:obrazek1}
+\end{figure}
+
+\section{obracanie obrazka}
+
+\begin{figure}[h]
+    \centering
+    \rotatebox{180}{\includegraphics[scale=0.5]{obrazek.jpg}}
+    \caption{Obrazek pierwszy}
+    \label{fig:obrazek2}
+\end{figure}
+
+\section{tabele}
+\subsection{tabela z podzieleniem}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Nazwa          & Wartość & ilosc \\ \hline
+        Prędkość       & 20 m/s  & wow  \\ \hline
+        Czas trwania   & 15 s    & tak bywa \\ \hline
+    \end{tabular}
+    \caption{Przykładowa tabela}
+    \label{tab:przyklad}
+\end{table}
+
+\subsection{tabela z łączonymi kolumnami}
+
+\begin{tabular}{|c|c|c|}
+    \hline
+    Kolumna 1 & Kolumna 2 & Kolumna 3 \\ % Dane w pierwszym wierszu
+    \hline
+    A         & B         & C         \\ % Dane w drugim wierszu
+    D         & E         & F         \\ % Dane w trzecim wierszu
+    \hline
+\end{tabular}
+
+\subsection{tabela z łączonymi wierszami}
+
+\begin{tabular}{|c|c|c|}
+    \hline
+    \multirow{2}{*}{Kategoria} & \multicolumn{2}{|c|}{Dane} \\ \cline{2-3}
+                               & Wartość 1 & Wartość 2 \\ \hline
+    A                          & 10        & 20        \\ \hline
+    B                          & 15        & 25        \\ \hline
+\end{tabular}
+
+
+\end{document}
