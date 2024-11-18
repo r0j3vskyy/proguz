@@ -1,0 +1,82 @@
+\documentclass[a4paper,11pt]{article}
+\title{Dokument}
+\author{Kacper Kieplin}
+\date{ \today}
+\usepackage[MeX]{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[verbose]{placeins}
+\newtheorem{twr}{Twierdzenie}
+\newtheorem{lem}[twr]{Lemat}
+
+\usepackage[a4paper, left=3.5cm, right=3.5cm, top=3.5cm, bottom=3.5cm, headsep=1.2cm]{geometry} 
+
+\begin{document}
+\maketitle
+\begin{center}
+\tableofcontents
+\end{center}
+
+\section{rozdział}
+\subsection{podrozdział}
+\subsubsection{podpodrozdział} 
+
+Wewnątrz akapitu suma może być napisana jako $\sum^n_{k=1}a_n$ albo jako $\displaystyle\sum^n_{k=1}a_n$, iloczyn jako $\prod^n _{k=2}$ albo $\displaystyle\prod^n _{k=2}$
+
+tekst\\
+\url{http://www.rich.edu/˜bush}\\
+Jest $-30\,^{\circ}\mathrm{C}$.\\
+\emph{kursywa}\\
+zielony\footnote{niebieski i żółty}\\
+
+\label{etykieta}
+test
+\ref{etykieta}
+test
+\pageref{etykieta}\\
+
+\begin{displaymath}
+a^x+y \neq a^{x+y}
+\end{displaymath}\\
+
+\begin{equation}
+a^x+y \neq a^{x+y}
+\end{equation}\\
+
+\begin{equation}
+\epsilon > 0 \label{eq:eps}
+\end{equation}
+Ze wzoru (\ref{eq:eps})
+otrzymujemy \ldots\\
+
+\begin{displaymath}
+\lim_{n \to \infty}
+\sum_{k=1}^n \frac{1}{k^2}
+= \frac{\pi^2}{6}
+\end{displaymath}\\
+
+
+\begin{lem} Pierwszy
+lemat\dots\label{lem:1} \end{lem}
+\begin{twr}[Dyzma]
+Przyjmując w~lemacie~\ref{lem:1},
+że $\epsilon=0$\dots \end{twr}
+\begin{lem}Trzeci lemat\end{lem}
+
+\begin{figure}[hbt!]
+  \centering
+  \includegraphics[width=8cm]{BW.PNG}
+  \caption{caption here}
+  \label{fig:vue-snoc-pos}
+\end{figure}
+\FloatBarrier
+
+
+\begin{figure}
+\centering
+\includegraphics[angle=360,width=0.5\textwidth]{Kwiaty.jpg}
+\end{figure}
+
+\end{document}
